@@ -44,13 +44,7 @@ A simple IP reconnaissance tool written in Go. This project aims to gather basic
 
 ### On macOS:
 
-Build and run the program:
-
-```
-./builds/build-and-run-mac.sh
-```
-
-Or run the compiled binary:
+Run the compiled binary:
 
 ```
 ./builds/go-ip-recon
