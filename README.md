@@ -6,14 +6,13 @@ A simple IP reconnaissance tool written in Go. This project aims to gather basic
 
 - OS detection via ping TTL analysis
 - Hostname lookup using nslookup
-- Basic port scanning for the 20 most important ports
-- Windows compatibility
+- Basic port scanning for 20 cybersecurity-relevant ports
+- Cross-platform support (Windows and macOS)
 - Traceroute analysis
 
 ## Requirements
 
 - Go 1.16 or higher
-- Windows OS (for full functionality)
 
 ## Installation
 
@@ -27,17 +26,42 @@ A simple IP reconnaissance tool written in Go. This project aims to gather basic
    cd go-ip-recon
    ```
 
-3. Build the project:
-   ```
-   go build ./cmd/main.go
-   ```
+## Building
+
+### For macOS:
+
+```
+./builds/build-mac.sh
+```
+
+### For Windows:
+
+```
+./builds/build-windows.sh
+```
 
 ## Usage
+
+### On macOS:
+
+Build and run the program:
+
+```
+./builds/build-and-run-mac.sh
+```
+
+Or run the compiled binary:
+
+```
+./builds/go-ip-recon
+```
+
+### On Windows:
 
 Run the compiled binary:
 
 ```
-./main
+.\builds\go-ip-recon.exe
 ```
 
 Follow the prompts to enter an IP address for reconnaissance.
@@ -53,21 +77,35 @@ go-ip-recon/
 │   │   └── recon.go
 │   └── osdetect/
 │       └── osdetect.go
+├── builds/
+│   ├── build-mac.sh
+│   ├── build-windows.sh
+├── .gitignore
+├── go.mod
+├── README.md
+└── LICENSE.md
 ```
 
-## Traceroute Analysis
+## Features in Detail
 
-The traceroute analysis feature maps the network path to the target IP address. It provides information about:
+### OS Detection
+Estimates the target's operating system based on TTL values from ping responses.
 
+### Hostname Lookup
+Performs a reverse DNS lookup to find the hostname associated with the IP address.
+
+### Port Scanning
+Scans 20 cybersecurity-relevant ports, including common services like HTTP, SSH, FTP, etc.
+
+### Traceroute Analysis
+Maps the network path to the target IP address, providing information about:
 - Number of hops to reach the destination
 - IP addresses of intermediate routers
 - Response times for each hop
 
-This feature helps in understanding the network topology and identifying potential bottlenecks or points of interest in the route to the target IP.
-
 ## Contributing
 
-This is a hobby project. If you have any cool ideas or improvements, let me know!
+This is a hobby project. If you have any cool ideas or improvements, feel free to fork the repository and submit a pull request!
 
 ## Disclaimer
 
