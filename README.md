@@ -75,4 +75,4 @@ This tool is for educational purposes only. Ensure you have permission before sc
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](LICENSE.md)
