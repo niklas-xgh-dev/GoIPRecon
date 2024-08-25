@@ -29,13 +29,11 @@ A simple IP reconnaissance tool written in Go. This project aims to gather basic
 ## Building
 
 ### For macOS:
-
 ```
 ./builds/build-mac.sh
 ```
 
 ### For Windows:
-
 ```
 ./builds/build-windows.sh
 ```
@@ -43,17 +41,13 @@ A simple IP reconnaissance tool written in Go. This project aims to gather basic
 ## Usage
 
 ### On macOS:
-
 Run the compiled binary:
-
 ```
 ./builds/go-ip-recon
 ```
 
 ### On Windows:
-
 Run the compiled binary:
-
 ```
 .\builds\go-ip-recon.exe
 ```
